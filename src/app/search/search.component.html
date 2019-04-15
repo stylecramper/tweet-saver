@@ -1,3 +1,15 @@
-<p>
-  search works!
-</p>
+<section class="search">
+  <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
+    <input
+      type="text"
+      class="search-input"
+      #searchfield
+      id="search-field"
+      placeholder="Search Twitter"
+      [formControl]="searchForm.controls['searchterm']">
+      <button
+        [disabled]="searchForm.invalid"
+        type="submit"
+        class="search-button"></button>
+  </form>
+</section>
