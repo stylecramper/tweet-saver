@@ -2,7 +2,6 @@ interface User {
     name: string;
     screenName: string;
     profileImageUrl: string;
-    personalUrl: string;
 }
 
 export class Tweet {
@@ -48,19 +47,8 @@ export class Tweet {
         return {
             name: user.name,
             screenName: user.screenName,
-            profileImageUrl: user.profileImageUrlHttps,
-            personalUrl: this.getUserUrl(user)
+            profileImageUrl: user.profileImageUrlHttps
         };
-    }
-
-    getUserUrl(user: any): string {
-        if (user.urlentity) {
-            return user.urlentity.expandedURL;
-        }
-        if (user.urlentities && user.urlentities.length) {
-            return user.urlentities[0].expandedURL;
-        }
-        return '';
     }
 }
 
