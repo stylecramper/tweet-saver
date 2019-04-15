@@ -1,3 +1,10 @@
-<p>
-  tweet-list works!
-</p>
+<ul class="tweet-list">
+  <li *ngFor="let tweet of tweetCache.tweets">
+    <tweet-item
+      [profileImageUrl]="tweet.user.profileImageUrl"
+      [name]="tweet.user.name"
+      [handle]="tweet.user.screenName"
+      [date]="tweet.createdAt"
+      [text]="tweet.text"></tweet-item>
+  </li>
+</ul>
