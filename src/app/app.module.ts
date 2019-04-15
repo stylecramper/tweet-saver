@@ -5,7 +5,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { SearchService } from './search/services/search.service';
+import { SearchService } from './services/search.service';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetItemComponent } from './tweet-item/tweet-item.component';
 
