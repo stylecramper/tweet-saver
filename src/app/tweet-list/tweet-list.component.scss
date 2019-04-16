@@ -1,15 +1,17 @@
 @import "../../sass/variables";
+@import "../../sass/mixins";
+
+:host {
+    display: flex;
+}
 
 .tweet-list {
+    flex-basis: 50%;
     padding-left: 0;
     list-style-type: none;
 
     li {
-        background-color: white;
-        border-bottom: solid 1px $tweet-bottom-border-color;
-        cursor: move;
-        margin-top: 10px;
-        padding-bottom: 10px;
+        @include tweet-item;
         transition: all .2s ease-in-out;
 
         &:first-child {
@@ -19,5 +21,19 @@
         &:hover {
             transform: scale(1.025,1.025);
         }
+    }
+}
+
+.app-saved {
+    flex-basis: 50%;
+}
+
+.saved-list {
+    list-style-type: none;
+    min-height: 160px;
+
+    li {
+        @include tweet-item;
+        transition: all .2s ease-in-out;
     }
 }

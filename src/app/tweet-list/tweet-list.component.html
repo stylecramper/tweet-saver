@@ -1,5 +1,10 @@
-<ul class="tweet-list">
-  <li *ngFor="let tweet of tweetCache.tweets">
+<ul class="tweet-list"
+  cdkDropList
+  #tweetList="cdkDropList"
+  [cdkDropListData]="tweetCache.tweets"
+  [cdkDropListConnectedTo]="[savedList]"
+  (cdkDropListDropped)="drop($event)">
+  <li *ngFor="let tweet of tweetCache.tweets" cdkDrag>
     <tweet-item
       [profileImageUrl]="tweet.user.profileImageUrl"
       [name]="tweet.user.name"
@@ -8,3 +13,20 @@
       [text]="tweet.text"></tweet-item>
   </li>
 </ul>
+<div class="app-saved">
+  <ul class="saved-list"
+    cdkDropList
+    #savedList="cdkDropList"
+    [cdkDropListData]="savedTweets.tweets"
+    [cdkDropListConnectedTo]="[tweetList]"
+    (cdkDropListDropped)="drop($event)">
+    <li *ngFor="let tweet of savedTweets.tweets" cdkDrag>
+        <tweet-item
+          [profileImageUrl]="tweet.user.profileImageUrl"
+          [name]="tweet.user.name"
+          [handle]="tweet.user.screenName"
+          [date]="tweet.createdAt"
+          [text]="tweet.text"></tweet-item>
+    </li>
+  </ul>
+</div>

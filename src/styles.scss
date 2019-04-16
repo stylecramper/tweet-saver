@@ -1,4 +1,17 @@
+@import "./sass/mixins";
+
 body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.cdk-drag-preview {
+    @include tweet-item;
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

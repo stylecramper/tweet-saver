@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin respond-to($breakpoint) {
     @if $breakpoint == "small" {
         @media (min-width: 769px) {
@@ -16,4 +18,13 @@
         @content;
         }
     }
+}
+
+@mixin tweet-item {
+    background-color: white;
+    border-bottom: solid 1px $tweet-bottom-border-color;
+    cursor: move;
+    list-style: none;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
