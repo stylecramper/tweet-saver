@@ -24,7 +24,7 @@
     [cdkDropListConnectedTo]="[tweetList]"
     (cdkDropListEntered)="enter($event)"
     (cdkDropListDropped)="drop($event)">
-    <li *ngFor="let tweet of savedTweets.tweets" cdkDrag>
+    <li *ngFor="let tweet of savedTweets.tweets">
         <tweet-item
           [profileImageUrl]="tweet.user.profileImageUrl"
           [name]="tweet.user.name"
