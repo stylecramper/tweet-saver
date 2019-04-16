@@ -36,10 +36,16 @@
         border: solid 1px $search-input-color;
         border-radius: 5px;
         color: white;
+        cursor: pointer;
         font-size: 20px;
         height: 30px;
         left: -8px;
         position: relative;
+
+        &[disabled] {
+            color: silver;
+            cursor: auto;
+        }
     }
 }
 
