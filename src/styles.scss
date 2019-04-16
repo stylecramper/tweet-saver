@@ -8,6 +8,7 @@ body {
 
 .cdk-drag-preview {
     @include tweet-item;
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.37);
 }
 
 .cdk-drag-placeholder {
