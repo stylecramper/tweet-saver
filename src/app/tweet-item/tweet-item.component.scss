@@ -1,0 +1,42 @@
+:host {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 12px;
+}
+
+.thumbnail-container {
+    flex-basis: 15%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.tweet-content {
+    flex-basis: 85%;
+}
+
+.name-date {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.name-and-handle {
+    flex-basis: 85%;
+}
+
+.full-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.date {
+    flex-basis: 15%;
+    font-size: 11px;
+    padding-right: 5px;
+    text-align: right;
+}

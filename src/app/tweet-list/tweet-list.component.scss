@@ -1,0 +1,23 @@
+@import "../../sass/variables";
+
+.tweet-list {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+        background-color: white;
+        border-bottom: solid 1px $tweet-bottom-border-color;
+        cursor: move;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        transition: all .2s ease-in-out;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:hover {
+            transform: scale(1.025,1.025);
+        }
+    }
+}

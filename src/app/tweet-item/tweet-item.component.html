@@ -1,9 +1,10 @@
-<img src="{{profileImageUrl}}" alt="{{name}}" title="{{name}}">
+<div class="thumbnail-container">
+    <img src="{{profileImageUrl}}" alt="{{name}}" title="{{name}}">
+</div>
 <div class="tweet-content">
   <div class="name-date">
-    <p class="full-name">{{name}}</p>
-    <p class="handle">@{{handle}}</p>
-    <p class="date">{{date}}</p>
+    <p class="name-and-handle"><span class="full-name">{{name}}</span> @{{handle}}</p>
+    <p class="date">{{date | date: 'shortDate'}}</p>
   </div>
   <div class="tweet-content">{{text}}</div>
 </div>
