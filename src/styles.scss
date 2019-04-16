@@ -1,6 +1,8 @@
 @import "./sass/mixins";
+@import "./sass/variables";
 
 body {
+    background-color: $body-background-color;
     font-family: 'Noto Sans', sans-serif;
 }
 

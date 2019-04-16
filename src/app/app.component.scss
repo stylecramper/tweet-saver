@@ -7,10 +7,20 @@
 }
 
 .page-title {
+    background-color: $page-heading-background-color;
+    color: white;
     font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 0.05em;
+    margin: 0 -15px;
+    padding: 0.67em 0 0.67em 20px;
+
+    span {
+        color: $page-heading-color;
+    }
 }
 
 .app-container {
+    background-color: $tweet-list-background-color;
     display: flex;
     flex-flow: column wrap;
     margin: 0 -15px;
@@ -19,7 +29,6 @@
         flex-flow: row nowrap;
     }
     > div {
-        border: dotted 1px red;
         flex: 1;
         min-height: 50vh;
         padding: 0 15px;
@@ -27,5 +36,6 @@
 }
 
 .app-search {
-    background-color: $tweet-list-background-color;
+    border-bottom: solid 12px $page-heading-background-color;
+    margin-top: 10px;
 }

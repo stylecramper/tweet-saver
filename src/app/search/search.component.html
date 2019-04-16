@@ -1,7 +1,10 @@
 <section class="search">
-  <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
+  <form
+    [formGroup]="searchForm"
+    class="search-form"
+    (ngSubmit)="doSearch(searchForm)">
     <input
-      type="text"
+      type="search"
       class="search-input"
       #searchfield
       id="search-field"
@@ -12,4 +15,7 @@
         type="submit"
         class="search-button"><i class="fa fa-search"></i></button>
   </form>
+  <div class="saved-column">
+    <h2 class="saved-tweets-title">Saved Tweets</h2>
+  </div>
 </section>

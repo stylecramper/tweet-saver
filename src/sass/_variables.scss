@@ -1,2 +1,14 @@
-$tweet-bottom-border-color: #557aa9;
-$tweet-list-background-color: #ffda9a;
+$primary-color: #2d271f;
+$primary-color-light: #f5f3f0;
+$primary-color-medium: #eae6e1;
+$secondary-color: #0067b6;
+$tertiary-color: #9cb700;
+
+$body-background-color: $primary-color-light;
+$page-heading-background-color: $primary-color;
+$page-heading-color: $tertiary-color;
+$tweet-subheading-color: $secondary-color;
+$tweet-bottom-border-color: $tertiary-color;
+$tweet-list-background-color: $primary-color-medium;
+$tweet-list-border-color: $tertiary-color;
+$search-input-color: $secondary-color;

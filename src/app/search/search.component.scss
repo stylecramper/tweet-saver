@@ -1,0 +1,44 @@
+@import "../../sass/variables";
+
+.search {
+    display: flex;
+    flex-flow: row nowrap;
+
+    & > * {
+        flex: 1 1 50%;
+    }
+
+    .search-form {
+        display: flex;
+    }
+
+    .saved-tweets-title {
+        color: $tweet-subheading-color;
+        margin: 0;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        padding-left: 15px;
+    }
+
+    input[type=search] {
+        border: solid 3px $search-input-color;
+        border-radius: 5px;
+        color: $search-input-color;
+        font-size: 12px;
+        height: 30px;
+        padding: 10px;
+        width: 240px;
+    }
+
+    .search-button {
+        background-color: $search-input-color;
+        border: solid 1px $search-input-color;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+        height: 30px;
+        left: -8px;
+        position: relative;
+    }
+}
