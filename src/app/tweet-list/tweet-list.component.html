@@ -14,11 +14,15 @@
   </li>
 </ul>
 <div class="app-saved">
+  <div class="drop-target" *ngIf="firstDrop">
+    <h2 class="drop-target-hint">Drop Here</h2>
+  </div>
   <ul class="saved-list"
     cdkDropList
     #savedList="cdkDropList"
     [cdkDropListData]="savedTweets.tweets"
     [cdkDropListConnectedTo]="[tweetList]"
+    (cdkDropListEntered)="enter($event)"
     (cdkDropListDropped)="drop($event)">
     <li *ngFor="let tweet of savedTweets.tweets" cdkDrag>
         <tweet-item

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, CdkDragEnter, transferArrayItem } from '@angular/cdk/drag-drop';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
 
 import { SearchService } from '../services/search.service';
@@ -14,6 +14,7 @@ import { TweetItemComponent } from '../tweet-item/tweet-item.component';
 export class TweetListComponent implements OnInit {
   public tweetCache: TweetListType;
   public savedTweets: TweetListType;
+  public firstDrop = false;
   private STORAGE_KEY = 'savedTweets';
 
   constructor(
@@ -32,8 +33,13 @@ export class TweetListComponent implements OnInit {
         event.container.data,
         event.previousIndex,
         event.currentIndex);
+        this.firstDrop = false;
         this.storage.set(this.STORAGE_KEY, this.savedTweets.tweets);
     }
+  }
+
+  enter(event: CdkDragEnter<any>): void {
+    this.firstDrop = (this.savedTweets.tweets.length === 0) ? true : false;
   }
 
 }
