@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatTooltipModule } from '@angular/material';
 import { StorageServiceModule } from 'angular-webstorage-service';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { TweetItemComponent } from './tweet-item/tweet-item.component';
     FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     StorageServiceModule
   ],

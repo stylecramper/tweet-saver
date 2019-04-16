@@ -2,6 +2,8 @@
   <form
     [formGroup]="searchForm"
     class="search-form"
+    matTooltip="{{tooltipText}}"
+    matTooltipClass="search-tooltip"
     (ngSubmit)="doSearch(searchForm)">
     <input
       type="search"
