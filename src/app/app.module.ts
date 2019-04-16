@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -25,7 +26,8 @@ import { TweetItemComponent } from './tweet-item/tweet-item.component';
     FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StorageServiceModule
   ],
   providers: [
     SearchService
