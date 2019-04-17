@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 import { TweetListComponent } from './tweet-list.component';
+import { TweetItemComponent } from '../tweet-item/tweet-item.component';
 
 describe('TweetListComponent', () => {
   let component: TweetListComponent;
@@ -8,7 +12,16 @@ describe('TweetListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TweetListComponent ]
+      declarations: [
+        TweetListComponent,
+        TweetItemComponent
+      ],
+      imports: [
+        HttpClientModule,
+        HttpClientJsonpModule,
+        DragDropModule,
+        StorageServiceModule
+      ]
     })
     .compileComponents();
   }));
