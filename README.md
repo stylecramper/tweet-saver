@@ -1,11 +1,11 @@
 # Tweet Saver
 
-## Install Dependencies
-Navigate into the tweet-saver directory. Run `npm install` to install all of the necessary dependencies.
+## Getting Started
+First, install dependencies. You'll need Node and NPM - instructions for installing those can be found at [Treehouse Installation Guides](https://treehouse.github.io/installation-guides/). In your terminal, cd to the root folder and install node modules by running `npm install`. You'll also need to install NPX globally by running `npm i -g npx`.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+Run `npx -p @angular/cli ng serve` for a dev server. In a browser, navigate to `http://localhost:4200/`.
 
 ## Running unit tests
 
