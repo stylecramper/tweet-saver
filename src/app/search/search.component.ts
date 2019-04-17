@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   searchForm: FormGroup;
   private FRIENDLY_ERROR = 'We\'re sorry, something has prevented fetching tweets.';
   private errorMessage: string;
+  public loading = false;
   public tooltipText = 'Search here, drop there \u2192';
 
   constructor(
@@ -33,12 +34,15 @@ export class SearchComponent implements OnInit {
 
   doSearch(form) {
     this.errorMessage = '';
+    this.loading = true;
     this.searchService.search(form.value)
       .subscribe((res) => {
         console.log('res', res);
       }, (err) => {
         console.log('err', err);
         this.errorMessage = this.FRIENDLY_ERROR;
+      }, () => {
+        this.loading = false;
       });
   }
 
